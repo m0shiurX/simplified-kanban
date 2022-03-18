@@ -4,13 +4,12 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Column;
 
-class DatabaseSeeder extends Seeder
+class ColumnSeeder extends Seeder
 {
     public function run(): void
     {
-        $this->call([
-            ColumnSeeder::class,
-        ]);
+        Column::factory(3)->hasCards(5)->create();
     }
 }
